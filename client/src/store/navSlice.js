@@ -11,7 +11,6 @@ const navSlice = createSlice({
     reducers:{
         linkActive:(state)=>{
             state.mob = !state.mob
-            console.log(state.mob)
         },
 
         allcategory:(state)=>{

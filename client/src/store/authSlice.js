@@ -11,7 +11,6 @@ try {
     storedUser = JSON.parse(raw);
   }
 } catch (err) {
-  console.warn("Invalid user stored, clearing...");
   localStorage.removeItem("user");
 }
 

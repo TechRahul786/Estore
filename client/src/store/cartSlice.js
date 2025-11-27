@@ -10,8 +10,6 @@ const cartSlice = createSlice({
       
       const product = action.payload.data;
 
-      console.log(product)
-
       const exist = state.cart.find((item) => item.id === product.id);
 
       if (exist) {

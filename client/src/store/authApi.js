@@ -32,7 +32,6 @@ const baseQuery = fetchBaseQuery({
 const baseQueryWithReauth = async (args, api, extraOptions) => {
   let result = await baseQuery(args, api, extraOptions);
 
-  console.log(result)
 
   // If token expired (401)
   if (result.error && result.error.status === 401) {
@@ -84,7 +83,6 @@ export const authApi = createApi({
           const { data } = await queryFulfilled;
           saveTokens(data); // Save tokens after login
         } catch (err) {
-          console.error("Login Failed", err);
         }
       },
     }),

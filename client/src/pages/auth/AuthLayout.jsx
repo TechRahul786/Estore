@@ -20,7 +20,7 @@ const AuthLayout = () =>{
                 await loginUser(formdata).unwrap()
                 navigate("/")
             } catch (error) {
-                  console.log("Login failed:", err);
+                 
             }
         }else{
             
@@ -28,7 +28,7 @@ const AuthLayout = () =>{
                 await registerUser(formdata).unwrap()
                 navigate("/auth")
             } catch (error) {
-                console.log(error)
+               
             }
         }
         
@@ -36,14 +36,14 @@ const AuthLayout = () =>{
     }
     
     return (
-        <div className="py-20 p-5 w-screen overflow-hidden bg-gray-200 md:px-30 md:h-screen">
-        <div className="md:flex w-full h-full shadow-2xl bg-white">
-                <div className="bg-blue-950 h-fit rounded-t-2xl  flex flex-col md:h-full md:rounded-none justify-center items-center md:w-2/4">
+        <div className="py-20 p-5 w-screen h-screen overflow-hidden bg-gray-200 md:px-30 md:h-screen">
+        <div className="md:flex w-full h-fit shadow-xl bg-white md:h-full">
+                <div className="bg-white h-fit rounded-t-2xl  flex flex-col md:h-full md:rounded-none justify-center items-center md:w-2/4">
                     <img src={loginimg} alt="login" className="size-38 md:size-46 "/>
-                    <p className="mt-3 mb-2 text-xl text-white md:mt-6">{formtype.toUpperCase()}</p>
-                    <p></p>
+                    <p className="mt-3 mb-2 text-xl text-black md:mt-6">{formtype.toUpperCase()}</p>
+                    <p className="text-sm font-semibold">{formtype === "login"? ("Log in and explore your favorite products"):("Join us and start your shopping journey")}</p>
                 </div>
-                <div className="w-full flex justify-center items-center md:h-full md:w-2/4">
+                <div className="w-full h-fit flex justify-center items-center md:h-full md:w-2/4">
                     <FormLayout formtype={formtype} setFormType={setFormType} handleForm={handleForm}/>
                 </div>
         </div>
