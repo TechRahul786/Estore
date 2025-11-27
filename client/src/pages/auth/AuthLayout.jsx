@@ -1,5 +1,5 @@
 
-import loginimg from "../../assets/images/loginrm.png"
+import loginimg from "../../../public/logo.png"
 import FormLayout from "../../components/FormLayout"
 import { useState } from "react"
 import { useLoginUserMutation, useRegisterUserMutation } from "../../store/authApi"
